@@ -4,6 +4,9 @@ class Outcome:
         self.name = name
         self.odds = odds
     
+    def __hash__(self):
+        return hash(self.name)
+    
     def __eq__(self,other):
         if self.name == other.name:
             return True
